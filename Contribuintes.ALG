@@ -80,7 +80,7 @@ fimfuncao
 
 Algoritmo "contribuintes"
 Var
-   impostoDevido, ibt, aba : real
+   impostoDevido, ibt, aba, isal : real
    i, contribuintes : inteiro
    salario : vetor [0..9] de real
    servico : vetor [0..9] de real
@@ -105,7 +105,8 @@ Inicio
       leia(gastosE[i])
    fimpara
    para i de 0 ate contribuintes-1 faca
-      ibt <- impostoBrutoTotal(impostoSobreSalario(salario[i]), impostoSobreServicos(servico[i]), impostoSobreGC(ganhoC[i]))
+      isal <- impostoSobreSalario(salario[i])
+      ibt <- impostoBrutoTotal(isal, impostoSobreServicos(servico[i]), impostoSobreGC(ganhoC[i]))
       aba <- abatimento(salario[i], servico[i], ganhoC[i], gastosM[i], gastosE[i]))
       impostoDevido <- ibt - aba
       escreval
