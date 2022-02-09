@@ -110,9 +110,11 @@ Inicio
       aba <- abatimento(salario[i], servico[i], ganhoC[i], gastosM[i], gastosE[i]))
       impostoDevido <- ibt - aba
       escreval
+      escreval("--------------------------------------"
       escreval("Resumo do ", (i+1), "o contribuinte: ")
       escreval("Imposto bruto total: ", ibt:8:2)
       escreval("Abatimento: ", aba:8:2)
       escreval("Imposto devido: ", impostoDevido:8:2)
+      escreval("--------------------------------------"
    fimpara
 Fimalgoritmo
